@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru" data-theme="graphic">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Полноценный тематический прототип персонального сайта адвоката"
+    />
+    <title>Сайт адвоката — полный прототип</title>
+    <script>
+      const theme = new URLSearchParams(location.search).get("theme");
+      const themes = ["graphic", "air", "refined"];
+      document.documentElement.dataset.theme = themes.includes(theme)
+        ? theme
+        : "graphic";
+    </script>
+    <link rel="stylesheet" href="full-prototype.css" />
+  </head>
+  <body>
+    <div class="prototype-switcher" aria-label="Переключение прототипов">
+      <a href="gallery.html">Все варианты</a>
+      <a href="index.html">01 Исходный</a>
+      <a href="full-prototype.html?theme=graphic">02 Графичный</a>
+      <a href="full-prototype.html?theme=air">03 Досье</a>
+      <a href="full-prototype.html?theme=refined">04 Refined</a>
+    </div>
+
+    <header class="site-header shell">
+      <a class="brand" href="#top" aria-label="Вернуться к началу страницы">
+        <span>[ИМЯ ФАМИЛИЯ]</span>
+        <small>АДВОКАТ</small>
+      </a>
+      <nav aria-label="Основная навигация">
+        <a href="#services">Направления</a>
+        <a href="#about">Об адвокате</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <a class="header-cta" href="#contact">Обсудить ситуацию <span>↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-grid shell">
+          <div class="hero-index">01</div>
+          <div class="hero-copy">
+            <p class="eyebrow">Персональная адвокатская практика</p>
+            <h1><span>Защита бизнеса</span><span>в сложных спорах</span></h1>
+            <p class="hero-lead">
+              Уголовно-правовая защита бизнеса, корпоративные споры и
+              сопровождение проверок контролирующих органов.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary-button" href="#contact">
+                Обсудить ситуацию <span>→</span>
+              </a>
+              <a class="text-link" href="#services">Посмотреть направления</a>
+            </div>
+          </div>
+
+          <div class="portrait" role="img" aria-label="Место для профессионального портрета адвоката">
+            <span>[ПРОФЕССИОНАЛЬНЫЙ ПОРТРЕТ]</span>
+            <p>Имя Фамилия<small>адвокат</small></p>
+          </div>
+
+          <div class="hero-proof proof-one">
+            <small>Основная специализация</small>
+            <strong>Экономические и коррупционные преступления</strong>
+          </div>
+          <div class="hero-proof proof-two">
+            <small>Подтверждение опыта</small>
+            <strong>[Стаж, образование или достижение]</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="shell">
+          <div class="section-title">
+            <p class="eyebrow">Направления работы</p>
+            <h2>Фокус на ситуациях, где цена решения высока</h2>
+          </div>
+
+          <div class="service-list">
+            <article>
+              <span class="number">01</span>
+              <h3>Уголовно-правовая защита бизнеса</h3>
+              <p>
+                Защита собственников, руководителей и компаний по делам в сфере
+                экономической деятельности.
+              </p>
+              <a href="#contact" aria-label="Обсудить уголовно-правовую защиту бизнеса">↗</a>
+            </article>
+            <article>
+              <span class="number">02</span>
+              <h3>Корпоративные споры</h3>
+              <p>
+                Правовая позиция в конфликтах между собственниками и при
+                оспаривании корпоративных решений.
+              </p>
+              <a href="#contact" aria-label="Обсудить корпоративный спор">↗</a>
+            </article>
+            <article>
+              <span class="number">03</span>
+              <h3>Проверки контролирующих органов</h3>
+              <p>
+                Сопровождение при проверках ДФР и налоговых органов, оценка
+                рисков и защита интересов клиента.
+              </p>
+              <a href="#contact" aria-label="Обсудить сопровождение проверки">↗</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="about-grid shell">
+          <div class="about-aside">
+            <p class="eyebrow">Об адвокате</p>
+            <span class="aside-mark">[ИФ]</span>
+          </div>
+          <div class="about-main">
+            <h2>Личное участие в деле и ясная правовая позиция на каждом этапе</h2>
+            <p class="about-lead">
+              После интервью этот блок свяжет опыт адвоката с задачами клиента.
+              Здесь появятся биография, подход к работе и точная формулировка
+              специализации.
+            </p>
+            <div class="principles">
+              <article>
+                <span>01</span>
+                <h3>Погружение в ситуацию</h3>
+                <p>Факты, риски и цели клиента формируют основу правовой позиции.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Прямой диалог</h3>
+                <p>Клиент понимает ход работы, доступные варианты и ограничения.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cases" id="cases">
+        <div class="shell">
+          <div class="section-title split-title">
+            <div>
+              <p class="eyebrow">Опыт в делах</p>
+              <h2>Избранные кейсы</h2>
+            </div>
+            <p class="section-note">
+              Материалы появятся после проверки конфиденциальности и согласования
+              допустимых формулировок.
+            </p>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card featured-case">
+              <div class="case-meta"><span>Уголовно-правовая защита</span><span>[ГОД]</span></div>
+              <h3>[Краткое название ситуации без раскрытия клиента]</h3>
+              <p>Исходная ситуация, задача адвоката и итог в пределах разрешенного раскрытия.</p>
+              <span class="card-link">Читать кейс ↗</span>
+            </article>
+            <article class="case-card">
+              <div class="case-meta"><span>Корпоративный спор</span><span>[ГОД]</span></div>
+              <h3>[Краткое название корпоративного спора]</h3>
+              <p>Суть конфликта, роль адвоката и подтвержденный результат.</p>
+              <span class="card-link">Читать кейс ↗</span>
+            </article>
+            <article class="case-card">
+              <div class="case-meta"><span>Проверка</span><span>[ГОД]</span></div>
+              <h3>[Название ситуации с контролирующим органом]</h3>
+              <p>Контекст проверки, принятые меры и итог сопровождения.</p>
+              <span class="card-link">Читать кейс ↗</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section publications">
+        <div class="shell">
+          <div class="section-title split-title">
+            <div>
+              <p class="eyebrow">Публикации</p>
+              <h2>Комментарии и разборы</h2>
+            </div>
+            <p class="section-note">
+              Раздел поддержит экспертность и SEO, если команда подтвердит
+              регулярный выпуск материалов.
+            </p>
+          </div>
+          <div class="publication-list">
+            <article>
+              <time datetime="2026-08-17">[ДАТА]</time>
+              <h3>[Заголовок разбора по теме защиты бизнеса]</h3>
+              <span>Статья ↗</span>
+            </article>
+            <article>
+              <time datetime="2026-08-17">[ДАТА]</time>
+              <h3>[Заголовок комментария об изменении практики]</h3>
+              <span>Комментарий ↗</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-grid shell">
+          <div class="contact-copy">
+            <p class="eyebrow">Первичный контакт</p>
+            <h2>Обсудим вашу ситуацию</h2>
+            <p>
+              Главный способ обращения нужно выбрать: звонок, форма или запись
+              на консультацию.
+            </p>
+            <div class="direct-contacts">
+              <a href="tel:+000000000000">[ТЕЛЕФОН]</a>
+              <a href="mailto:mail@example.com">[EMAIL]</a>
+              <span>[ГОРОД / АДРЕС]</span>
+            </div>
+          </div>
+
+          <form class="contact-form" action="#" method="post">
+            <label><span>Имя</span><input type="text" name="name" placeholder="Как к вам обращаться" /></label>
+            <label><span>Телефон или email</span><input type="text" name="contact" placeholder="Удобный способ связи" /></label>
+            <label><span>Кратко опишите вопрос</span><textarea name="message" rows="3" placeholder="Без конфиденциальных деталей"></textarea></label>
+            <label class="consent"><input type="checkbox" name="consent" /><span>[Текст согласия на обработку данных]</span></label>
+            <button class="button primary-button" type="button">Отправить запрос <span>→</span></button>
+            <small>Форма в прототипе не отправляет данные.</small>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-grid">
+        <div class="brand"><span>[ИМЯ ФАМИЛИЯ]</span><small>АДВОКАТ</small></div>
+        <p>© [ГОД]. Информация на сайте не заменяет юридическую консультацию.</p>
+        <a href="#">[Политика обработки данных]</a>
+      </div>
+    </footer>
+  </body>
+</html>

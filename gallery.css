@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #d9d9d4; color: #111b23; font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+header { display: flex; min-height: 88px; padding: 0 32px; align-items: center; justify-content: space-between; border-bottom: 1px solid #bcbdb8; }
+header span { font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+header p { margin: 0; color: #687078; font-size: 12px; }
+main { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #bcbdb8; }
+.card { display: grid; min-height: 650px; grid-template-rows: 1fr auto; background: #efeee8; }
+.preview { position: relative; display: flex; min-height: 430px; padding: 44px; align-items: center; overflow: hidden; }
+.preview span { position: relative; z-index: 2; font-size: clamp(42px, 5vw, 78px); letter-spacing: -.07em; line-height: .9; }
+.preview i { position: absolute; right: 7%; bottom: 0; width: 30%; height: 82%; }
+.copy { display: grid; grid-template-columns: .5fr 1fr 1fr; gap: 24px; padding: 26px 32px 34px; border-top: 1px solid rgba(0,0,0,.16); }
+.copy small { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.copy h1 { margin: 0; font-size: 20px; }
+.copy p { margin: 0; color: #5d6870; font-size: 13px; line-height: 1.5; }
+.original .preview { background: #0a1c29; color: #fff; }
+.original .preview span { font-family: Georgia, serif; font-weight: 400; }
+.original .preview em { color: #cad8d0; }
+.original .preview i { background: repeating-linear-gradient(145deg,#36505f,#36505f 1px,#294653 1px,#294653 18px); }
+.graphic .preview { background: #f4f2ec; }
+.graphic .preview span { font-weight: 900; text-transform: uppercase; }
+.graphic .preview i { background: #2645e8; }
+.air .preview { align-items: flex-end; background: #eee7da; color: #241f1b; }
+.air .preview span { max-width: 70%; margin-bottom: 20px; font-family: Georgia, serif; font-weight: 400; }
+.air .preview i { top: 0; left: 7%; width: 30%; height: 100%; background: #792c3a; opacity: .94; }
+.refined .preview { background: #0d2432; color: #fff; }
+.refined .preview span { font-family: Georgia, serif; }
+.refined .preview b { color: #bdd1c6; font-family: Arial, sans-serif; font-size: .82em; font-weight: 400; }
+.refined .preview i { width: 38%; background: #294654; }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; } header { padding: 20px; align-items: flex-start; flex-direction: column; gap: 8px; } .card { min-height: 560px; } }
+@media (max-width: 600px) { .preview { min-height: 360px; padding: 24px; } .copy { grid-template-columns: 1fr; } .preview span { font-size: 44px; } }
